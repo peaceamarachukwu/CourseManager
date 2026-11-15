@@ -1,21 +1,26 @@
 
 Functional Operations 
+
+
 Add Course: entering valid course records (course code, course title, and positive
 integer credit units) should store the data in the internal list to be rendered in the display. 
 
 View All Courses: displaying all recorded courses across multiple entries with accurate formatting and
 completeness. 
 
-Search Course by Code: Test searching for an existing course code (confirming full course details are
+Search Course by Code: searching for an existing course code (confirming full course details are
 returned) as well as searching for a non-existent course code (confirming a "not found" message is shown).
 
-Compute Total Credit Units: Test calculating the total credit units when the list is empty (0), 
-after adding several courses, and after loading courses from a file. Save to File:
-Test exporting the current course list to a file and verifying the saved records persist in comma-separated format 
-(CODE,Title,Units). Load from File: Test reading a previously saved file back into the application and confirming
+Compute Total Credit Units: calculating the total credit units should work for all scenarios without breaking the
+program; when the list is empty (0), after adding several courses, and after loading courses from a file. 
+
+Save to File: exporting the current course list to a file and verifying the saved records persist in comma-separated format (CODE,Title,Units). 
+
+Load from File: reading a previously saved file back into the application and confirming
 the course table/list and total credit units update accurately.
 
-Exit Program: Test terminating the application cleanly via the window close button (GUI) or option 7 (console mode).
+Exit Program: terminating the application cleanly via the window close button (GUI) or option 7 (console mode).
+
 Input Validation, String Processing & Exception-Handling Tests Blank/Empty Fields: Attempt to add a course or run
 a search with empty inputs to verify validation prevents submission and triggers an error/warning message.
 
@@ -28,7 +33,7 @@ case-insensitive matching. Invalid Menu Choice & File Errors: In console mode, e
 menu prompt to verify invalid-choice handling, and test loading a missing or corrupted file to verify 
 IOException / malformed-line handling.
 
-Technical Feature Verification Tests Recursion Verification: 
+Technical Features and Recursion implementation: 
 The recursive credit-unit summation (computeUnitsRecursive) and recursive course lookup 
 (recursiveSearch in GUI mode) return exact results without stack errors.
 Iteration Verification: Verify that loops properly traverse the course collection when populating the UI table,
